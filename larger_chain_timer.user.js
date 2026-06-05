@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Larger chain timer
 // @namespace    annosz.torn-usercripts.larger-chain-timer
-// @version      1.0
+// @version      1.0.1
 // @description  Make chain timer bigger for better visibility
 // @author       Annosz [2896714]
 // @match        https://www.torn.com/*
@@ -12,15 +12,15 @@
 // @grant        none
 // ==/UserScript==
 
-waitForKeyElements(".speed___dFP2B", actionFunction);
+waitForKeyElements('[class^="speed"]', actionFunction);
 
 function actionFunction(jNode) {
     'use strict';
 
-    const barStats = document.querySelector(".bar-stats___E_LqA");
-    const timeLeft = document.querySelector(".bar-timeleft___B9RGV");
-    const speed = document.querySelector(".speed___dFP2B");
-    const tickList = document.querySelector(".tick-list___McObN");
+    const timeLeft = document.querySelector('[class^="bar-timeleft"]');
+    const speed = document.querySelector('[class^="speed"]');
+    const tickList = document.querySelector('[class^="tick-list"]');
+    const barStats = timeLeft.parentElement;
 
     barStats.style.display = "block";
     timeLeft.style.fontSize = "60px";
@@ -28,3 +28,4 @@ function actionFunction(jNode) {
     speed.style.top = "unset";
     tickList.style.height = "8px";
 };
+
