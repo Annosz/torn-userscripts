@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [TORN] OC 2.0 Statistics
 // @namespace    oc2-stats
-// @version      1.0.1
+// @version      1.0.2
 // @description  Adds weekly and monthly OC 2.0 completion statistics to the Torn faction crimes page.
 // @author       Annosz [2896714]
 // @match        https://www.torn.com/*
@@ -94,7 +94,7 @@
                   <th>Success</th>
                   <th>Failure</th>
                   <th>Success Rate</th>
-                  <th>Total Compensation</th>
+                  <th>Total Income</th>
                   <th>Total Item Cost</th>
                   <th>Total Respect</th>
                 </tr>
@@ -578,8 +578,8 @@
             <td>${row.success}</td>
             <td>${row.failure}</td>
             <td>${successRate}%</td>
-            <td>${Math.round(row.compensation).toLocaleString()}</td>
-            <td>${Math.round(row.itemCost).toLocaleString()}</td>
+            <td>$${Math.round(row.compensation).toLocaleString()}</td>
+            <td>$${Math.round(row.itemCost).toLocaleString()}</td>
             <td>${Math.round(row.respect).toLocaleString()}</td>
           </tr>
         `;
