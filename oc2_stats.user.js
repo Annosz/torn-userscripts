@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [TORN] OC 2.0 Statistics
 // @namespace    oc2-stats
-// @version      1.0.2
+// @version      1.0.3
 // @description  Adds weekly and monthly OC 2.0 completion statistics to the Torn faction crimes page.
 // @author       Annosz [2896714]
 // @match        https://www.torn.com/*
@@ -343,7 +343,7 @@
       setMode(reportMode);
       setStatus("API key saved. Pick weekly or monthly, then load the report.");
     } else {
-      setStatus("Test and save a public API key with faction API access to enable the report.");
+      setStatus("Test and save a minimal API key with faction API access to enable the report.");
     }
   }
 
