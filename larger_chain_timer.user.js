@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Larger chain timer
 // @namespace    annosz.torn-usercripts.larger-chain-timer
-// @version      1.0.3
+// @version      1.0.4
 // @description  Make chain timer bigger for better visibility
 // @author       Annosz [2896714]
 // @match        https://www.torn.com/*
@@ -29,7 +29,8 @@ function actionFunction(jNode) {
     const speed = chainBar?.querySelector('[class*="speed___"]');
     const tickList = chainBar?.querySelector('[class*="tickList___"]');
 
-    if (timeLeft.textContent.trim() !== '00:00') {
+    const time = timeLeft.textContent.trim();
+    if (time.length === 5 && time !== '00:00') {
         barStats.style.display = 'flex';
         barStats.style.flexWrap = 'wrap';
 
